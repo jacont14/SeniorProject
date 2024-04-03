@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+:root{
+    --green: #1bb60a;
+    --black: #000;
+    --white: #fff;
+    --light-gray: #eaeaea;
+    --dark-gray: #222;
+    --light-green: #8eb15c;
+}
+/* ------------------- GLOBAL STYLE  ------------------- */
+
+#skipLink{
+	position: absolute;
+	left: -999px;
+	height:  0;
+	width:  0;
+}
+
+#skipLink:focus{
+	top: 1em;
+	left: 1em;
+	display: block;
+	font-size: 1.2em;
+	padding: 0.5em;
+	width: 25%;
+	height: 1.5em;
+	line-height: 1.3em;
+}
+h1, h2, h3, h4{
+    font-weight: bold;
+}
+
+h1, h2, h3, nav, label {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+  }
+  nav, li{
+    font-size:1.2em;
+  }
+  h1{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    position: absolute;
+	left: -999px;
+  }
+  p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+header{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(142,177,92,1) 100%);
+    padding-bottom: 1rem;
+    height: 100px;
+    width: 100%;
+}
+ header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 40px;
+ }
+
+ header nav{
+    position: absolute;
+    top: 0;
+    font-size: 1.2em;
+    width: 100%;
+    height: 50%;
+ }
+
+ header nav a {
+    display: grid;
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin: 1px;
+	border-radius: 0.5rem;
+    padding:10px;
+    grid-template-columns: 1fr;
+    color: var(--green);
+  }
+  header nav a:hover{
+    background-color: var(--green);
+    color: var(--white);
+  }
+  
+  header ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color: var(--dark-gray);
+    border-radius: 0.5rem;
+  }
+
+  header li a{
+    padding: 10px;
+  }
+
+  [href="#top"] {
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    border-radius:10px 0 0px 0px;
+    background-color: var(--dark-gray);
+    padding: 1rem;
+  }
+
+  header label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 26px 10px;
+    position: relative;
+    user-select: none;
+  }
+  
+  header label span{
+    background: var(--dark-gray);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+
+  header label span:before, header label span:after{
+    background: var(--dark-gray);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  }
+
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  .header .menu-btn {
+    display: none;
+  }
+  .header .menu-btn:checked ~ .menu {
+    max-height: 280px;
+  }
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+.number{
+    background-color: var(--light-green);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom:40px;
+    width: 100%;
+   height: 100px;
+}
+.number a{
+    font-size: 1.3em;
+    color: var(--light-gray);
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.number p{
+    padding-left: 2rem;
+    padding-top: 1rem;
+    position: relative;
+    top: 18px;
+}
+.number svg{
+    stroke: var(--white);
+}
+.number svg:hover{
+    stroke: var(--dark-gray);
+}
+
+a{
+    text-decoration: none;
+    color:var(--dark-gray);
+}
+
+.num{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.num svg{
+    padding-right: 0.5rem;
+    position: relative;
+    top: 15px;
+}
+
+li{
+    padding-bottom: 0.5rem;
+}
+
+.main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 400px;
+    padding-bottom: 3rem;
+    filter: none;
+}
+.main h2{
+    text-align: center;
+    position: relative;
+    top: 250px;
+    line-height: 1.35;
+    max-width: 25ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 2.5em;
+}
+.green img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 500px;
+    padding-bottom: 2rem;
+    padding-top: 2.5rem;
+    filter: drop-shadow(-11px 10px 10px rgba(0,0,0,.5));
+}
+
+.main a{
+    background-color: var(--green);
+    padding:12px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius:5px;
+    font-weight:bold;
+    display:block;
+    text-align:center;
+    width:30%;
+    margin: 0 auto;
+    filter: drop-shadow(-11px 18px 12px rgba(0,0,0,.5));
+    position: relative;
+    top: 280px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scroll {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
+    margin: 0 auto;
+    padding-bottom: 0.75rem;
+}
+
+.scroll::-webkit-scrollbar {
+    height: 18px;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+      background:var(--green);
+      border-radius: 10px;
+  }
+ 
+  .scroll::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 15px var(--green);
+  }
+  .scroll::-webkit-scrollbar-thumb:hover {
+     background: var(--light-green);
+  }
+
+.scroll img{
+    width: 500px;
+    height: 350px;
+    padding-right: 1rem;
+    filter: none;
+}
+
+h2{
+    padding-left: 2.5rem;
+}  
+
+.scroll h3{
+    font-size: 2.3em;
+}
+
+.service a{
+    background-color: var(--green);
+    padding:12px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius:5px;
+    font-weight:bold;
+    display:block;
+    text-align:center;
+    width:30%;
+    margin: 0 auto;
+    filter: drop-shadow(-11px 18px 12px rgba(0,0,0,.5));
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    left: 150px;
+}
+
+.choose img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 500px;
+    padding-bottom: 2rem;
+    filter: drop-shadow(-11px 10px 10px rgba(0,0,0,.5));
+}
+
+.choose h3{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.green h3{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.choose p{
+  line-height: 1.35;
+  max-width: 85ch;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+}
+.green p{
+  line-height: 1.35;
+  max-width: 85ch;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+}
+
+.contacts h2{
+    text-align: center;
+    padding-bottom: 0.25rem;
+}
+
+.contacts{
+    padding-top: 2rem;
+}
+
+form{
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  label{
+    display: inline-block;
+    margin: 1rem 0 0 1rem ;
+    color: var(--dark-gray);
+    font-size: 1.5em;
+  }
+  
+  input[type="text"]{
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    background: none;
+    background-color: var(--white);
+    outline: none;
+    border: 2px solid var(--green);
+    line-height: 1;
+    height: 2.5rem;
+    filter: drop-shadow(-5px 5px 10px rgba(0,0,0,.5));
+    border-radius: 10px;
+  }
+
+  .required{
+    display: inline-block;
+    color: var(--green);
+    font-size: 1.5em;
+  }
+  .message{
+    display: none;
+    color: red;
+    font-size: 1.2em;
+    margin: 0.5rem ;
+    font-weight: bold;
+  }
+  textarea{
+    display: block;
+    font-size: 1.1rem;
+    height: 5rem;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    outline: none;
+    filter: drop-shadow(-5px 5px 10px rgba(0,0,0,.5));
+  }
+  .mess{
+    margin-bottom: 3rem;
+  }
+
+  #mySubmit, #myReset{
+    display: block;
+    padding: 0.75rem;
+    width: 50%;
+    margin: 1rem auto;
+    outline: none;
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--green);
+    filter: drop-shadow(-11px 10px 10px rgba(0,0,0,.5));
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius:5px;
+    font-size: 1em;
+  }
+  footer{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(142,177,92,1) 100%);
+    padding: 0 1rem 1rem 1rem;
+    line-height: 1;
+    text-align: center;
+  }
+  #myReset{
+    margin: 1rem 0.25rem;
+  }
+  #mySubmit{
+    position: relative;
+    left: 126px;
+    bottom: 60px;
+  }
+  
+footer li{
+    margin: 1rem;
+}
+footer a:hover{
+    color: var(--green);
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 1rem;
+}
+
+.mains img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 200px;
+    padding-bottom: 1.2rem;
+    padding-top: 2rem;
+}
+.mains p{
+    line-height: 1.35;
+    max-width: 40ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.mains{
+    padding-top: 5rem;
+    grid-template-columns: 1fr;
+    display: grid;
+}
+.mains h2{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.mains h3{
+    font-size: 2.3em;
+    text-align: center;
+    padding-bottom: 0.25rem;
+}
+.mains li{
+    text-align: center;
+    line-height: 1;
+    max-width: 40ch;
+    padding: 0.75rem 0.5rem 0;
+    margin: 0 auto;
+    list-style-type:disc;
+}
+
+ .regular, .irrigations{
+    background-color: var(--light-green);
+    width: 500px;
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    filter: drop-shadow(-5px 5px 10px rgba(0,0,0,.5));
+}
+.trees, .removal, .plantings, .palms, .mowings, .removals, .spreads, .seeds, .sprays{
+    background-color: var(--light-green);
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    filter: drop-shadow(-5px 5px 10px rgba(0,0,0,.5));
+}
+.mains a{
+    background-color: var(--green);
+    padding:12px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius:5px;
+    font-weight:bold;
+    display:block;
+    text-align:center;
+    width:30%;
+    margin: 0 auto;
+    filter: drop-shadow(-11px 18px 12px rgba(0,0,0,.5));
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+.contact{
+    margin-top: 5rem;
+}
+.contact img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 2rem;
+    height: 400px;
+}
+.contact p{
+    line-height: 1.35;
+    max-width: 80ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.maint{
+    margin-top: 6rem;
+}
+.maint h2{
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+.maint img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.75rem;
+}
+.sections img{
+    width: 90%;
+    height: 500px;
+}
+.sections p{
+    line-height: 1.35;
+    max-width: 80ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+figure img{
+   height: 550px;
+    width: 80%;
+   filter: drop-shadow(-11px 18px 12px rgba(0,0,0,.5));
+   padding-top: 1.5rem;
+}
+figcaption{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    padding-top: 1rem;
+    text-align: center;
+}
+.maint h3{
+padding-top: 2rem;
+}
+.sections h3{
+    text-align: center;
+}
+.area{
+    text-align: center;
+}
+.cit svg{
+    color: var(--green);
+}
+.cit{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    text-align: center;
+    padding: 2rem;
+}
+.city svg{
+    position: relative;
+    right: 90px;
+    bottom: 40px;
+}
+.cityone svg{
+    position: relative;
+    right: 145px;
+    bottom: 40px;
+}
+.citytwo svg{
+    position: relative;
+    right: 100px;
+    bottom: 40px;
+}
+.citythree svg{
+    position: relative;
+    right: 95px;
+    bottom: 40px;
+}
+.cityfour svg{
+    position: relative;
+    right: 100px;
+    bottom: 40px;
+}
+.cityfive svg{
+    position: relative;
+    right: 95px;
+    bottom: 40px;
+}
+
+.citysix svg{
+    position: relative;
+    right: 75px;
+    bottom: 40px;
+}
+.cityseven svg{
+    position: relative;
+    right: 90px;
+    bottom: 40px;
+}
+.cities svg{
+    position: relative;
+    right: 102px;
+    bottom: 40px;
+}
+.citiesone svg{
+    position: relative;
+    right: 115px;
+    bottom: 40px;
+}
+.citiestwo svg{
+    position: relative;
+    right: 80px;
+    bottom: 40px;
+}
+.citiesthree svg{
+    position: relative;
+    right: 98px;
+    bottom: 40px;
+}
+.citiesfour svg{
+    position: relative;
+    right: 100px;
+    bottom: 40px;
+}
+.citiesfive svg{
+    position: relative;
+    right: 120px;
+    bottom: 40px;
+}
+.citiessix svg{
+    position: relative;
+    right: 70px;
+    bottom: 40px;
+}
+.citiesseven svg{
+    position: relative;
+    right: 95px;
+    bottom: 40px;
+}
+dt{
+    display: none;
+}
+
+@media screen and (min-width: 500px){
+
+    
+}
+   
+    
+  
+
+  
