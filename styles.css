@@ -197,7 +197,7 @@ header{
     display: none;
   }
   .header .menu-btn:checked ~ .menu {
-    max-height: 280px;
+    max-height: 205px;
   }
   .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
@@ -759,7 +759,9 @@ dt{
 
 @media screen and (min-width: 500px){
 
-    
+    .header img{
+        width: 300px;
+    }
 }
    
     
