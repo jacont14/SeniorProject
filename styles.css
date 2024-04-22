@@ -810,11 +810,12 @@ figcaption{
 .cit{
     display: grid;
     text-align: center;
+    margin: 1rem;
 
 }
 .city svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 40px;
 }
 .cityone svg{
@@ -1047,11 +1048,10 @@ dt{
     }
 
       .cit{
-        grid-template-columns: 1fr 1fr;
-        display: grid;    
+        grid-template-columns: 1fr;
+        display: grid;
+        font-size: 1em;    
     }
-
-    
 
     footer ul{
         display: grid;
