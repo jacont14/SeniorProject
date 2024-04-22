@@ -1047,7 +1047,7 @@ dt{
     }
 
       .cit{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         display: grid;
         font-size: 1em;    
         padding: 1rem;
@@ -1060,8 +1060,8 @@ dt{
     }
     
     .cityone svg{
-        right: 85px;
-        bottom: 80px;
+        right: 125px;
+        bottom: 35px;
     }
 
     textarea{
@@ -1190,6 +1190,13 @@ dt{
 
     footer .num{
         font-size: 1.5em;
+    }
+    .cit{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cityone svg{
+        right: 125px;
     }
      
 }
@@ -1323,7 +1330,7 @@ dt{
         margin-left: 4rem;
       }
       .cityone svg{
-        right: 147px;
+        right: 127px;
         bottom: 40px;
     }
     .main h3{
@@ -1333,6 +1340,7 @@ dt{
         top: 480px;
         left: 50px;
     }
+
 }
     
   
