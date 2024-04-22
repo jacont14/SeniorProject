@@ -241,7 +241,7 @@ header img{
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
 a{
@@ -255,10 +255,10 @@ a{
     position: relative;
 }
 
-.num svg{
+header .num svg{
     stroke: var(--white);
     position: relative;
-    top: 15px;
+    top: 5px;
 }
 .num svg:hover{
     stroke: var(--light-green);
@@ -814,7 +814,7 @@ figcaption{
 }
 .city svg{
     position: relative;
-    right: 70px;
+    right: 80px;
     bottom: 35px;
 }
 .cityone svg{
@@ -822,73 +822,73 @@ figcaption{
 }
 .citytwo svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 35px;
 }
 .citythree svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 35px;
 }
 .cityfour svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 35px;
 }
 .cityfive svg{
     position: relative;
-    right: 75px;
+    right: 85px;
     bottom: 35px;
 }
 
 .citysix svg{
     position: relative;
-    right: 65px;
+    right: 75px;
     bottom: 35px;
 }
 .cityseven svg{
     position: relative;
-    right: 70px;
+    right: 80px;
     bottom: 35px;
 }
 .cities svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 35px;
 }
 .citiesone svg{
     position: relative;
-    right: 95px;
+    right: 105px;
     bottom: 35px;
 }
 .citiestwo svg{
     position: relative;
-    right: 60px;
+    right: 70px;
     bottom: 35px;
 }
 .citiesthree svg{
     position: relative;
-    right: 77px;
+    right: 87px;
     bottom: 35px;
 }
 .citiesfour svg{
     position: relative;
-    right: 80px;
+    right: 90px;
     bottom: 35px;
 }
 .citiesfive svg{
     position: relative;
-    right: 95px;
+    right: 105px;
     bottom: 35px;
 }
 .citiessix svg{
     position: relative;
-    right: 50px;
+    right: 60px;
     bottom: 35px;
 }
 .citiesseven svg{
     position: relative;
-    right: 70px;
+    right: 80px;
     bottom: 35px;
 }
 
@@ -915,13 +915,12 @@ dt{
    
     .number p{
         position: relative;
-        padding-left: 1rem;
-        top: 15px;
+        top: 25px;
     }
     
     .num{
-        bottom: 13px;
-        right: 20px;
+        bottom: 23px;
+        right: 5px;
     }
     .main img{
         height: 400px;
@@ -996,7 +995,7 @@ dt{
         padding: 1rem;
     }
     figure img{
-        height: 350px;
+        height: 310px;
          width: 100%;
      }
 
@@ -1060,7 +1059,7 @@ dt{
     }
     
     .cityone svg{
-        right: 125px;
+        right: 135px;
         bottom: 35px;
     }
 
@@ -1191,12 +1190,29 @@ dt{
     footer .num{
         font-size: 1.5em;
     }
+    
     .cit{
         grid-template-columns: 1fr 1fr;
     }
 
     .cityone svg{
         right: 125px;
+    }
+
+    header .num svg{
+        stroke: var(--white);
+        position: relative;
+        top: 15px;
+    }
+
+    .num{
+        bottom: 15px;
+        right: 5px;
+    }
+
+    .number p{
+        position: relative;
+        top: 15px;
     }
      
 }
