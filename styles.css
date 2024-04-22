@@ -90,6 +90,8 @@ h1, h2, h3, h4, nav, label {
     font-family: 'Bebas Neue', cursive;
     font-size: 3em;
   }
+
+
   nav, li{
     font-size:1.2em;
   }
@@ -761,7 +763,7 @@ footer .num {
     padding-bottom: 0.75rem;
 }
 .sections img{
-    width: 100%;
+    width: 350px;
 }
 .sections p{
     margin: 0 auto;
@@ -772,6 +774,7 @@ footer .num {
 }
 figure img{
    padding-top: 1rem;
+   width: 350px;
 }
 figcaption{
     font-family: 'Montserrat', sans-serif;
@@ -795,9 +798,6 @@ figcaption{
     font-size: 2.7em;
 }
 
-.maint img{
-    width: 350px;
-}
 .sections h3{
     text-align: center;
 }
@@ -810,11 +810,11 @@ figcaption{
 .cit{
     display: grid;
     text-align: center;
-    margin: 1rem;
+
 }
 .city svg{
     position: relative;
-    right: 90px;
+    right: 80px;
     bottom: 40px;
 }
 .cityone svg{
@@ -984,7 +984,6 @@ dt{
     .contact p{
         line-height: 1.45;
         max-width: 40ch;
-        padding: 1rem;
     }
 
     .sections img{
@@ -997,7 +996,7 @@ dt{
         padding: 1rem;
     }
     figure img{
-        height: 450px;
+        height: 350px;
          width: 100%;
      }
 
@@ -1049,20 +1048,17 @@ dt{
 
       .cit{
         grid-template-columns: 1fr 1fr;
-        display: grid;
-        text-align: center;
-        padding: 2rem;
+        display: grid;    
     }
+
+    
 
     footer ul{
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-bottom: 1rem;
     }
-    .cit{
-        grid-template-columns: 1fr 1fr;
-        font-size: 1em;
-    }
+    
     .cityone svg{
         right: 105px;
         bottom: 85px;
