@@ -114,6 +114,7 @@ h1, h2, h3, h4, nav, label {
     background-color: var(--dark-gray);
     margin: 0 auto;
     z-index: 3;
+    width: 100%;
   }
 
   header img{
@@ -912,7 +913,7 @@ dt{
     }
     .main img{
         height: 400px;
-        width: 500px;
+        width: 100%;
     }
     .main h2{
         max-width: 25ch;
@@ -925,7 +926,7 @@ dt{
     }
    
     .green img{
-       width: 500px;
+       width: 100%;
        height: 500px;
     }
 
@@ -947,7 +948,7 @@ dt{
     
     .choose img{
         height: 500px;
-        width: 500px;
+        width: 100%;
     }
 
     .choose p{
