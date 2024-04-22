@@ -912,7 +912,7 @@ dt{
     }
     .main img{
         height: 400px;
-        width: 100%;
+        width: 500px;
     }
     .main h2{
         max-width: 25ch;
@@ -925,7 +925,7 @@ dt{
     }
    
     .green img{
-       width: 100%;
+       width: 500px;
        height: 500px;
     }
 
@@ -947,7 +947,7 @@ dt{
     
     .choose img{
         height: 500px;
-        width: 100%;
+        width: 500px;
     }
 
     .choose p{
