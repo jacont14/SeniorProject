@@ -808,89 +808,88 @@ figcaption{
     color: var(--dark-green);
 }
 .cit{
-    display: grid;
     text-align: center;
-    margin: 1rem;
+ 
 
 }
 .city svg{
     position: relative;
-    right: 90px;
-    bottom: 40px;
+    right: 70px;
+    bottom: 35px;
 }
 .cityone svg{
     position: relative;
 }
 .citytwo svg{
     position: relative;
-    right: 100px;
-    bottom: 40px;
+    right: 80px;
+    bottom: 35px;
 }
 .citythree svg{
     position: relative;
-    right: 95px;
-    bottom: 40px;
+    right: 80px;
+    bottom: 35px;
 }
 .cityfour svg{
     position: relative;
-    right: 100px;
-    bottom: 40px;
+    right: 80px;
+    bottom: 35px;
 }
 .cityfive svg{
     position: relative;
-    right: 95px;
-    bottom: 40px;
+    right: 75px;
+    bottom: 35px;
 }
 
 .citysix svg{
     position: relative;
-    right: 75px;
-    bottom: 40px;
+    right: 65px;
+    bottom: 35px;
 }
 .cityseven svg{
     position: relative;
-    right: 90px;
-    bottom: 40px;
+    right: 70px;
+    bottom: 35px;
 }
 .cities svg{
     position: relative;
-    right: 102px;
-    bottom: 40px;
+    right: 80px;
+    bottom: 35px;
 }
 .citiesone svg{
     position: relative;
-    right: 115px;
-    bottom: 40px;
+    right: 95px;
+    bottom: 35px;
 }
 .citiestwo svg{
     position: relative;
-    right: 80px;
-    bottom: 40px;
+    right: 60px;
+    bottom: 35px;
 }
 .citiesthree svg{
     position: relative;
-    right: 98px;
-    bottom: 40px;
+    right: 77px;
+    bottom: 35px;
 }
 .citiesfour svg{
     position: relative;
-    right: 100px;
-    bottom: 40px;
+    right: 80px;
+    bottom: 35px;
 }
 .citiesfive svg{
     position: relative;
-    right: 115px;
-    bottom: 40px;
+    right: 95px;
+    bottom: 35px;
 }
 .citiessix svg{
     position: relative;
-    right: 70px;
-    bottom: 40px;
+    right: 50px;
+    bottom: 35px;
 }
 .citiesseven svg{
     position: relative;
-    right: 93px;
-    bottom: 40px;
+    right: 70px;
+    bottom: 35px;
 }
 
 dt{
@@ -1048,9 +1047,10 @@ dt{
     }
 
       .cit{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         display: grid;
         font-size: 1em;    
+        padding: 1rem;
     }
 
     footer ul{
@@ -1060,8 +1060,8 @@ dt{
     }
     
     .cityone svg{
-        right: 145px;
-        bottom: 35px;
+        right: 85px;
+        bottom: 80px;
     }
 
     textarea{
