@@ -122,6 +122,7 @@ h1, h2, h3, h4, nav, label {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 200px;
   }
   .header nav{
     position: absolute;
@@ -276,6 +277,7 @@ a{
     margin-right: auto;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    width: 100%;
 }
 .main h2{
     text-align: center;
@@ -295,6 +297,11 @@ a{
     margin-right: auto;
     padding-bottom: 2rem;
     padding-top: 3rem;
+    width: 100%;
+}
+
+.main h3{
+    display: none;
 }
 
 .main a{
@@ -389,6 +396,7 @@ h2{
     margin-right: auto;
     padding-bottom: 1rem;
     padding-top: 2rem;
+    width: 100%;
 }
 
 .choose h3{
@@ -434,7 +442,7 @@ h2{
 }
 
 form{
-    width: 400px;
+   
     margin: 0 auto;
     font-size: 1.1rem;
     display: block;
@@ -590,7 +598,6 @@ input[type="text"].error, input[type="email"].error, input[type="tel"].error, te
     border-radius: 15px;
     outline: none;
     box-shadow: -10px 10px 20px var(--dk-med-gray);
-    width: 400px;
     background-color: var(--white);
   }
   .mess{
@@ -787,6 +794,10 @@ figcaption{
     margin: 0 auto;
     font-size: 2.7em;
 }
+
+.maint img{
+    width: 350px;
+}
 .sections h3{
     text-align: center;
 }
@@ -890,12 +901,13 @@ dt{
   }
   
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 375px){
    
     .scroll img{
         width: 400px;
         height: 300px;
     }
+    
     
     .scroll h3{
         font-size: 2.2em;
@@ -931,11 +943,11 @@ dt{
     }
 
     .main a{
-        width:30%;
+        width:50%;
     }
     
     .service a{
-        width:30%;
+        width:50%;
     }
 
     .choose{
@@ -953,13 +965,15 @@ dt{
 
     .choose p{
         line-height: 1.45;
-        max-width: 50ch;
-        padding: 0.5rem 0;
+        max-width: 80ch;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
       }
       .green p{
         line-height: 1.45;
-        max-width: 50ch;
-        padding: 0.5rem 0;
+        max-width: 80ch;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
       }
 
       
@@ -990,12 +1004,14 @@ dt{
      .mains img{
         padding-bottom: 1.2rem;
         padding-top: 1rem;
-        width: 350px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
     .mains p{
         margin: 0 auto;
-        text-align: center
+        text-align: center;
+        padding-left: 1.5rem;
+        
     }
 
     .services{
@@ -1004,11 +1020,11 @@ dt{
      
     .trees, .removal, .plantings, .palms, .mowings, .removals, .spreads, .seeds, .sprays,.regular, .irrigations{
         padding: 1rem;
-        width: 70%;
-        height: 600px;
+        width: 80%;
+        height: 650px;
     }
     .mains a{
-        width: 30%;
+        width: 50%;
     }
     .experience{
         line-height: 1.35;
@@ -1050,6 +1066,10 @@ dt{
     .cityone svg{
         right: 105px;
         bottom: 85px;
+    }
+
+    textarea{
+        width: 270px;
     }
 }
 
@@ -1152,6 +1172,7 @@ dt{
         margin: 0 auto;
         font-size: 3em;
         padding-bottom: 2.5rem;
+        display: block;
     }
     .main a{
         box-shadow: -10px 10px 20px var(--dark-gray);
